@@ -2,6 +2,7 @@
   "version": 2,
   "projects": {
     "nx-aws-cdk": {
+      "$schema": "../../node_modules/nx/schemas/project-schema.json",
       "root": "packages/nx-aws-cdk",
       "sourceRoot": "packages/nx-aws-cdk/src",
       "projectType": "library",
@@ -10,18 +11,19 @@
           "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["packages/nx-aws-cdk/**/*.ts"]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         },
         "test": {
           "executor": "@nrwl/jest:jest",
           "outputs": ["coverage/packages/nx-aws-cdk"],
           "options": {
-            "jestConfig": "packages/nx-aws-cdk/jest.config.js",
+            "jestConfig": "packages/nx-aws-cdk/jest.config.ts",
             "passWithNoTests": true
           }
         },
         "build": {
-          "executor": "@nrwl/node:package",
+          "executor": "@nrwl/js:tsc",
           "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/packages/nx-aws-cdk",
@@ -67,9 +69,11 @@
             "notesFile": "packages/nx-aws-cdk/CHANGELOG.md"
           }
         }
-      }
+      },
+      "tags": []
     },
     "nx-aws-cdk-e2e": {
+      "$schema": "../../node_modules/nx/schemas/project-schema.json",
       "root": "e2e/nx-aws-cdk-e2e",
       "projectType": "application",
       "sourceRoot": "e2e/nx-aws-cdk-e2e/src",
@@ -83,10 +87,10 @@
             "jestConfig": "e2e/nx-aws-cdk-e2e/jest.config.js"
           }
         }
-      }
+      },
+      "tags": [],
+      "implicitDependencies": ["nx-aws-cdk"]
     }
   },
-  "cli": {
-    "defaultCollection": "@nrwl/workspace"
-  }
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json"
 }
