@@ -1,9 +1,9 @@
 import * as path from 'path';
-import { ExecutorContext } from '@nrwl/tao/src/shared/workspace';
 
 import { DeployExecutorSchema } from './schema';
 import { createCommand, runCommandProcess, parseArgs } from '../../utils/executor.util';
 import { ParsedExecutorInterface } from '../../interfaces/parsed-executor.interface';
+import { ExecutorContext } from '@nrwl/devkit';
 
 export interface ParsedDeployExecutorOption extends ParsedExecutorInterface {
   parseArgs?: Record<string, string>;

@@ -18,7 +18,7 @@
     "is-ci": "is-ci",
     "test": "nx test nx-aws-cdk",
     "lint": "nx lint nx-aws-cdk",
-    "e2e": "nx e2e",
+    "e2e": "nx e2e nx-aws-cdk-e2e",
     "format": "nx format:write",
     "build:aws-cdk": "nx build nx-aws-cdk",
     "link:aws-cdk": "cd dist/packages/nx-aws-cdk && npm link",
@@ -30,6 +30,7 @@
   },
   "devDependencies": {
     "@angular-devkit/architect": "^0.1302.4",
+    "@angular-devkit/core": "^14.0.3",
     "@angular-devkit/schematics": "^13.2.4",
     "@commitlint/cli": "^13.2.1",
     "@commitlint/config-conventional": "^13.2.0",

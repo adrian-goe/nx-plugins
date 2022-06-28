@@ -1,9 +1,9 @@
 import { Tree } from '@angular-devkit/schematics';
-import { SchematicTestRunner } from '@angular-devkit/schematics/testing';
 import { readJsonInTree } from '@nrwl/workspace';
 import * as path from 'path';
 import { createEmptyWorkspace, runSchematic } from '@nrwl/workspace/testing';
 import { CDK_VERSION } from '../../utils/cdk-shared';
+import { SchematicTestRunner } from '@angular-devkit/schematics/testing/schematic-test-runner';
 
 describe('Update AWS CDK dependencies to v2', () => {
   let tree: Tree;

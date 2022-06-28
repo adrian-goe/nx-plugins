@@ -1,8 +1,8 @@
 import { Tree } from '@angular-devkit/schematics';
-import { SchematicTestRunner } from '@angular-devkit/schematics/testing';
 import { readJsonInTree } from '@nrwl/workspace';
 import * as path from 'path';
 import { createEmptyWorkspace } from '@nrwl/workspace/testing';
+import { SchematicTestRunner } from '@angular-devkit/schematics/testing';
 
 describe('Update 2.0.0', () => {
   let tree: Tree;
