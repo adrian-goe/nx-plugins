@@ -8,7 +8,6 @@ import {
   getWorkspaceLayout,
   joinPathFragments,
   names,
-  NxJsonProjectConfiguration,
   offsetFromRoot,
   ProjectConfiguration,
   readWorkspaceConfiguration,
@@ -102,7 +101,7 @@ export async function applicationGenerator(host: Tree, options: ApplicationSchem
 
   tasks.push(initTask);
 
-  const project: ProjectConfiguration & NxJsonProjectConfiguration = {
+  const project: ProjectConfiguration = {
     root: normalizedOptions.projectRoot,
     projectType: 'application',
     sourceRoot: `${normalizedOptions.projectRoot}/src`,
