@@ -18,7 +18,7 @@
     "is-ci": "is-ci",
     "test": "nx test nx-aws-cdk",
     "lint": "nx lint nx-aws-cdk",
-    "e2e": "nx e2e",
+    "e2e": "nx e2e nx-aws-cdk-e2e",
     "format": "nx format:write",
     "build:aws-cdk": "nx build nx-aws-cdk",
     "link:aws-cdk": "cd dist/packages/nx-aws-cdk && npm link",

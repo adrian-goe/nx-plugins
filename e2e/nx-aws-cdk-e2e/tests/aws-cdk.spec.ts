@@ -21,12 +21,12 @@ describe('nx-aws-cdk e2e', () => {
   });
 
   describe('--tags', () => {
-    it('should add tags to nx.json', async () => {
+    it('should add tags to the project', async () => {
       const plugin = uniq('nx-aws-cdk');
 
       await runNxCommandAsync(`generate @codebrew/nx-aws-cdk:application ${plugin} --tags e2etag,e2ePackage`);
-      const nxJson = readJson('nx.json');
-      expect(nxJson.projects[plugin].tags).toEqual(['e2etag', 'e2ePackage']);
+      const nxJson = readJson(`apps/${plugin}/project.json`);
+      expect(nxJson.tags).toEqual(['e2etag', 'e2ePackage']);
     }, 120000);
   });
 });
